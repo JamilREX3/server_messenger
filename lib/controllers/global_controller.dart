@@ -62,20 +62,7 @@ void onStart(ServiceInstance service) async {
   });
   //smsListener();
   smsListenerByTelephony();
-  // Timer.periodic(const Duration(seconds: 2), (timer) async {
-  //   if (service is AndroidServiceInstance) {
-  //     if (await service.isForegroundService()) {
-  //       service.setForegroundNotificationInfo(
-  //           title: 'Running Service',
-  //           content: '');
-  //     }
-  //   }
-  // });
-
-  //var staticUrl = GetStorage().read('staticUrl');
-  // service.setForegroundNotificationInfo(
-  //     title: 'Running Service',
-  //     content: 'on : ${staticUrl.toString()}');
+ 
 
   if (service is AndroidServiceInstance) {
    await GetStorage.init();
@@ -89,34 +76,8 @@ void onStart(ServiceInstance service) async {
 
 }
 
-// smsListener()async {
-//   await GetStorage.init();
-//   final plugin = Readsms();
-//   print(plugin.read());
-//   plugin.smsStream.listen((sms) async{
-//
-//     print('body : ${sms.body}');
-//     print('sender : ${sms.sender}');
-//     print('timeReceived : ${sms.timeReceived}');
-//     await GetStorage().write('lastMessage', sms.body);
-//     // var response = await ApiRequest().post(
-//     //   path: '/sms/store',
-//     //   body: {
-//     //     'message':sms.body.toString(),
-//     //     'sender':sms.sender.toString(),
-//     //   }
-//     // );
-//     // print(response.statusCode);
-//
-//
-//
-//
-//
-//
-//   },onDone: (){
-//
-//   });
-// }
+
+
 
 
 smsListenerByTelephony()async{
