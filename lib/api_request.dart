@@ -7,10 +7,7 @@ import 'package:get_storage/get_storage.dart';
 
 
 
-// class KConstants{
-//   static const String baseUrl = 'https://api.zdstor.com/api';
-//   static const String imageBaseUrl = 'https://api.zdstor.com/';
-// }
+
 
 class ApiRequest {
   final _dio = dio.Dio();
